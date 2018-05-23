@@ -1,0 +1,724 @@
+/* Import Google Web fonts */
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic);
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+/* Set the page defaults e.g. background and default typography */
+
+html {
+  min-height: 100%;
+}
+
+body {
+  background: radial-gradient(ellipse at bottom left, rgba(104, 128, 138, 0.4) 10%, rgba(138, 114, 76, 0) 40%), linear-gradient(to bottom, rgba(57, 173, 219, .25), rgba(42, 60, 87, 0.4)), linear-gradient(135deg, #670d10, #092756);
+}
+
+h1 {
+  color: white;
+  padding-left: 10px;
+}
+
+#hover {
+  color: rgba(188, 175, 204, 0.9);
+}
+
+h2#testimonials {
+  color: #fffae3;
+}
+
+h4 {font-size: 20;
+  font-family: 'Playfair Display SC', serif;
+  margin: 0;text-align:justify;
+}
+
+h5{font-size: 15;
+  font-family: 'Playfair Display SC', serif;
+  margin: 0;text-align:justify;
+
+}
+div#all {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* generic css */
+
+.view {
+  margin: 10px;
+  float: left;
+  border: 10px solid #fff;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  box-shadow: 1px 1px 2px #e6e6e6;
+  cursor: default;
+  background: #fff url(../images/bgimg.jpg) no-repeat center center
+}
+
+.view .mask,
+.view .content {
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0
+}
+
+.view img {
+  display: block;
+  position: relative
+}
+
+.view h2 {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  font-size: 17px;
+  font-family: Raleway, serif;
+  padding: 10px;
+  /*background: rgba(0, 0, 0, 0.8);*/
+  margin: 20px 0 0 0
+}
+
+.view p {
+  font-family: Merriweather, serif;
+  font-style: italic;
+  font-size: 14px;
+  position: relative;
+  color: #fff;
+  padding: 0px 20px 0px;
+  text-align: center
+}
+
+.view a.info {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  background: #000;
+  color: #fff;
+  font-family: Raleway, serif;
+  text-transform: uppercase;
+  box-shadow: 0 0 1px #000
+}
+
+.view a.info:hover {
+  box-shadow: 0 0 5px #000
+}
+
+
+/*1*/
+
+.view-first img {
+  /*1*/
+  transition: all 0.2s linear;
+  width: 300px;
+  height: 200px;
+}
+
+.view-first .mask {
+  opacity: 0;
+  background-color: rgba(58, 1, 132, 0.44);
+  transition: all 0.4s ease-in-out;
+}
+
+.view-first h2 {
+  transform: translateY(-100px);
+  opacity: 0;
+  font-family: Raleway, serif;
+  transition: all 0.2s ease-in-out;
+}
+
+.view-first p {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+
+.view-first a.info {
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+
+/* */
+
+.view-first:hover img {
+  transform: scale(1.1);
+}
+
+.view-first:hover .mask {
+  opacity: 1;
+}
+
+.view-first:hover h2,
+.view-first:hover p,
+.view-first:hover a.info {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.view-first:hover p {
+  transition-delay: 0.1s;
+}
+
+.view-first:hover a.info {
+  transition-delay: 0.2s;
+}
+
+
+/*2*/
+
+.view-second img {
+  transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+}
+
+.view-second .mask {
+  background-color: rgba(12, 19, 27, 0.6);
+  width: 300px;
+  padding: 105px;
+  height: 200px;
+  opacity: 0;
+  transform: translate(265px, 145px) rotate(45deg);
+  -webkit-transform: translate(265px, 145px) rotate(45deg);
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+}
+
+.view-second h2 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  font-family: Raleway, serif;
+  background: transparent;
+  margin: 20px 40px 0px 40px;
+  -webkit-transform: translate(200px, -200px);
+  transform: translate(200px, -200px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.view-second p {
+  transform: translate(-200px, 200px);
+  -webkit-transform: translate(200px, -200px);
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+}
+
+.view-second a.info {
+  transform: translate(0px, 100px);
+  -webkit-transform: translate(0px, 100px);
+  transition: all 0.2s 0.1s ease-in-out;
+  -webkit-transition: all 0.2s 0.1s ease-in-out;
+}
+
+
+/* */
+
+.view-second:hover .mask {
+  opacity: 1;
+  transform: translate(-80px, -125px) rotate(45deg);
+  -webkit-transform: translate(-80px, -125px) rotate(45deg);
+}
+
+.view-second:hover h2 {
+  transform: translate(0px, 0px);
+  -webkit-transform: translate(0px, 0px);
+  transition-delay: 0.3s;
+  -webkit-transition-delay: 0.3s;
+}
+
+.view-second:hover p {
+  transform: translate(0px, 0px);
+  -webkit-transform: translate(0px, 0px);
+  transition-delay: 0.4s;
+  -webkit-transition-delay: 0.4s;
+}
+
+.view-second:hover a.info {
+  transform: translate(0px, 0px);
+  -webkit-transform: translate(0px, 0px);
+  transition-delay: 0.5s;
+  -webkit-transition-delay: 0.5s;
+}
+
+
+/*3*/
+
+.view-tenth img {
+  transform: scaleY(1);
+  transition: all .7s ease-in-out;
+}
+
+.view-tenth .mask {
+  background-color: rgba(255, 231, 179, 0.3);
+  transition: all 0.5s linear;
+  opacity: 0;
+}
+
+.view-tenth h2 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  background: transparent;
+  margin: 20px 40px 0px 40px;
+  transform: scale(0);
+  color: #333;
+  transition: all 0.5s linear;
+  opacity: 0;
+}
+
+.view-tenth p {
+  color: #333;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.5s linear;
+  padding-
+}
+
+.view-tenth a.info {
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.5s linear;
+}
+
+.view-tenth:hover img {
+  -webkit-transform: scale(10);
+  transform: scale(10);
+  opacity: 0;
+}
+
+.view-tenth:hover .mask {
+  opacity: 1;
+}
+
+.view-tenth:hover h2,
+.view-tenth:hover p,
+.view-tenth:hover a.info {
+  transform: scale(1);
+  opacity: 1;
+}
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+html, body {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+}
+
+nav {
+  max-width: 960px;
+  /* The mask-image gives us some extra fading. It is not necessary but without this, you can't face out the box-shadows. This clips our menu */
+  mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
+  margin: 0 auto;
+  /* Using padding instead of margin for the top and bottom here will keep our box-shadow visible and not affected by the mask-image */
+  padding: 75px 0;
+}
+
+nav ul {
+  text-align: center;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+  width: 100%;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  padding: 20px;
+  font-family: "Roboto";
+  color: rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.4);
+  font-size: 25px;
+  text-decoration: none;
+  display: block;
+}
+
+nav ul li a:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(0, 0, 0, 0.7);
+}
+@font-face {
+  font-family: Playfair Display; src: url("images/TravelingTypewriter.otf") format("opentype");
+}
+
+body {
+  background: #fff;
+
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.74);
+}
+
+p{text-align: justify;
+text-align-last: left;}
+
+#images {
+    width: 275px;
+    height: 200px;
+}
+
+#image {
+  position: left;
+  float: left;
+  width: 275px;
+  height: 300px;
+}
+
+#image > div {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+
+ #image img {
+
+    width: 275px;
+    height: 300px;
+}
+
+#caption {
+    background: #000;
+    color: #ccc;
+    display: none;
+    overflow: hidden;
+}
+
+#caption p {
+  padding: 5px;
+  margin: 0;
+}
+/* a few tweaks here and there */
+
+h2 {
+  font-family: 'Playfair Display SC', serif;
+  margin: 0;
+}
+
+h3{
+  font-family: 'Montserrat', serif;
+  font-size: 100px;
+  font-weight: 700;
+  text-shadow: 0 0 9px #000000;
+  width: 75%;
+  color:#FFB6C1
+  text-align: center
+}
+img {
+  max-width: 100%;
+}
+
+
+
+/* Set the default style of the figure element */
+
+figure {
+  margin: 0;
+}
+
+figure img {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+figcaption {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Default style of the blockquote element
+    Tweak this or add your won by using class names */
+
+blockquote {
+  width: 66%;
+  margin: 1em auto;
+  background: #ddd;
+  padding: 1em;
+  font-size: 1.25em;
+  text-align: center;
+  color: #696969;
+  border-bottom: 1px solid #999;
+  border-top: 1px solid #999;
+}
+
+
+/* This controls the content sections.
+    The width of the column is set by "padding" rather than the "width" style
+    e.g. 20% = 60% width. */
+
+.content {
+  margin: 0 auto;
+  padding: 1em 20%;
+  box-sizing: border-box;
+}
+.content1 {
+  margin: 0 auto;
+  padding: 0em 10%;
+  box-sizing: border-box;
+}
+
+/* The footer's style */
+
+footer {
+  height: 100px;
+  background: #000;
+  color: #eee;
+  text-align: center;
+  padding: 1em;
+}
+
+/* Styling the full-page background headers */
+
+.image_bg {
+  /* this sets the height of each
+  full width image section to that of the viewport.*/
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center !important;
+}
+
+
+/* the text inside the headers */
+
+header {
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 0 0 9px #000000;
+  width: 75%;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 6vw;
+  font-family: 'Traveling', monospace;
+}
+
+header a {
+  color: white;
+}
+
+h6 {
+  font-family: 'Playfair Display SC', serif;
+  margin: 0; color: #800000
+}
+
+/* Styles for header sections to apply background images or colour. */
+
+.pier {
+  background: url(images/grapefruits.jpg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.legs {
+  background: url(images/legs.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.banana {
+  background: url(images/banana.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+.rouge {
+  background: url(images/rouge.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.girl{
+  background: url(images/girl.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.Law {
+  background: url(images/Law.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* These are the background images defined in example.html */
+
+.paris_scroll {
+  background: url(images/Paris2013.jpg);
+  background-size: cover;
+  background-attachment: scroll;
+  /*This line makes it scroll, not fixed */
+}
+
+.man {
+  background: url(images/man-2785071_1920.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100% !important;
+}
+
+.man_halftone {
+  background: url(images/man-halftone.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100% !important;
+}
+
+.oldpaper {
+  /* This style is applied to a content section
+  rather than a header section */
+  background: url(images/old-paper.jpg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+.beer {
+  background: url(images/beer.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100% !important;
+}
+
+.embeds {
+  background: url(images/croissant-648803_1280.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100% !important;
+}
+
+/* Example stuff - The CSS for the additional examples in example.html */
+
+.profile img { /* styles the profile images in the first header section*/
+
+  width:400px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin: 1em;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.profile {
+  text-align: center;
+  font-weight: normal;
+}
+
+/* Styling the alternative figure example */
+
+.overlay_fig {
+  position: relative;
+}
+
+.overlay_fig img {
+  box-shadow: none;
+}
+
+.overlay_fig figcaption {
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  background: rgba(0, 0, 0, 0.6);
+  width: 66%;
+  font-size: 2em;
+  color: white;
+  padding: 0.33em;
+}
+
+
+.content.man {
+  /* This style creates an alternative style for the column of content
+  the column is ofset to the right of the viewport rather than centred */
+  padding: 1em 10% 1em 60%;
+}
+
+
+/*Alternative blockquote styles */
+.bq_one {
+  font-size: 18px;
+  font-family: georgia, serif;
+  color: #900C3F;
+  background: #FAD7A0;
+  padding: 1em;
+  border-left: 8px solid #C70039;
+}
+
+.bq_two {
+  background: none;
+}
+text1{
+  text-align: justify;
+  text-justify:inter-word;
+}
+/* Making the rows */
+
+.flex_container {
+  display: left;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex_container1 {
+    display: left;
+    flex-wrap: wrap;
+    float: left;
+    justify-content: center;
+  }
+
+.item {
+  margin: 0.5em;
+  flex-basis: 20%; /*This determines each item's width*/
+  flex-grow: 1; /* This makes each item grow to fit the available space. set to 0 to tuen off*/
+}
+
+.embed_bg { /* a hack to make embedding stuff into the headers work */
+  /* height: 100vh; */
+   /* this sets the height of each full width image section to that of the viewport.*/
+   position: relative;
+   /*display: flex;  */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-position: center !important;
+}
+
+
+/* Create an overlay colour or image
+to cover the background image of a full screen header.
+This could be a transparent colour - see the coomented line below, or an image.
+The image defined below is a black/transparent vignette-styled png file.   */
+.overlay_full {
+  position: absolute;
+/* background: rgba(122,55,0,0.3); */
+background: url(images/grad1.png) no-repeat;
+background-size: cover;
+width: 100%;
+height: 100vh;
+z-index: 2;
+}
+
+.front { /* apply this to the header that corresponds to the overlay_full element.
+  It will ensure that the header and text go above the overlay colour or image*/
+  z-index:100;
+}
+
+
+caption1{
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit}
+
+.overlay_full_holes {
+  position: absolute;
+/* background: rgba(122,55,0,0.3); */
+background: url(images/top_secret.png) no-repeat;
+background-size: cover;
+width: 100%;
+height: 100vh;
+z-index: 2;
+}
